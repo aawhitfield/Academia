@@ -18,12 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Binary Chaos Logo" translatesAutoresizingMaskIntoConstraints="NO" id="QDx-Ab-BrO">
-                                <rect key="frame" x="3" y="0.0" width="661" height="375"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Binary Chaos Logo" translatesAutoresizingMaskIntoConstraints="NO" id="QDx-Ab-BrO">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QDx-Ab-BrO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2CZ-jP-0cZ"/>
+                            <constraint firstItem="QDx-Ab-BrO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FU8-Cg-Aod"/>
+                            <constraint firstItem="QDx-Ab-BrO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QXk-DT-6Ew"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QDx-Ab-BrO" secondAttribute="trailing" id="ggp-aX-c4a"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

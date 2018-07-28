@@ -12,8 +12,21 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    // set size of buttons to be a function of screen size for adaptive layout
+    var widthMultiplier = 0.0
+    var heightMultiplier = 0.0
+
+    @IBOutlet weak var headClassroomButton: UIButton!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        widthMultiplier = Double(self.view.frame.size.width) / 110
+        heightMultiplier = Double(self.view.frame.size.height) / 145
+        
+        headClassroomButton.frame.size.width = 10.0 // headClassroomButton.frame.width * CGFloat(widthMultiplier)
+        headClassroomButton.frame.size.height = 10.0 // headClassroomButton.frame.height * CGFloat(heightMultiplier)
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'

@@ -30,8 +30,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeD-65-ven">
-                                <rect key="frame" x="370" y="37" width="126" height="175"/>
+                                <rect key="frame" x="374" y="39" width="125" height="173"/>
                                 <color key="backgroundColor" red="0.33975967171759636" green="1" blue="0.22774925858597173" alpha="0.6901408450704225" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="2Xu-zY-WRz"/>
+                                    <constraint firstAttribute="height" constant="173" id="73k-Rb-cLg"/>
+                                    <constraint firstAttribute="width" secondItem="QeD-65-ven" secondAttribute="height" multiplier="125:173" id="Y3d-6Y-K4n"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="ozp-VB-5KQ" kind="show" id="ZBk-ze-5oI"/>
@@ -41,21 +46,22 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zmA-gn-Ffl" firstAttribute="trailing" secondItem="4qk-I5-YsI" secondAttribute="trailing" id="1ZF-Yu-4NO"/>
-                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="QeD-65-ven" secondAttribute="bottom" constant="195" id="5Tw-LA-9TQ"/>
                             <constraint firstItem="zmA-gn-Ffl" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="6Lt-j0-IUQ"/>
                             <constraint firstItem="zmA-gn-Ffl" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="99b-ao-cbC"/>
-                            <constraint firstItem="QeD-65-ven" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="370" id="KrR-AG-LTa"/>
+                            <constraint firstItem="QeD-65-ven" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="7" id="DWY-1n-Fib"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="QeD-65-ven" secondAttribute="trailing" constant="168" id="PjY-0t-aOI"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="KaA-z3-pKz" secondAttribute="bottom" id="Sh8-cW-lB9"/>
-                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="QeD-65-ven" secondAttribute="trailing" constant="171" id="YpF-Nt-0i3"/>
                             <constraint firstItem="KaA-z3-pKz" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="c7d-gV-PNz"/>
                             <constraint firstItem="KaA-z3-pKz" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="iQy-p1-aS5"/>
-                            <constraint firstItem="QeD-65-ven" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" constant="5" id="wPb-qD-DLT"/>
                             <constraint firstItem="zmA-gn-Ffl" firstAttribute="top" secondItem="4qk-I5-YsI" secondAttribute="top" id="xPh-TM-qRQ"/>
                             <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="KaA-z3-pKz" secondAttribute="trailing" id="zXY-69-icz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="KlS-kv-87j"/>
+                    <connections>
+                        <outlet property="headClassroomButton" destination="QeD-65-ven" id="hFs-1J-FBY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>

@@ -22,11 +22,22 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        widthMultiplier = Double(self.view.frame.size.width) / 110
-        heightMultiplier = Double(self.view.frame.size.height) / 145
+        let buttonWidth = Double(self.view.frame.size.width) / 5
+        let buttonHeight = Double(self.view.frame.size.height) / 3
+        let classRoomButtonX = Double(self.view.frame.size.width) / 7
+        let classRoomButtonY = Double(self.view.frame.size.width) / -7
+            
+        headClassroomButton.setTitle("Test Button", for: .normal)
+        headClassroomButton.frame = CGRect(x: 200, y: 50, width: 100, height: 100)
+        headClassroomButton.translatesAutoresizingMaskIntoConstraints = false
         
-        headClassroomButton.frame.size.width = 10.0 // headClassroomButton.frame.width * CGFloat(widthMultiplier)
-        headClassroomButton.frame.size.height = 10.0 // headClassroomButton.frame.height * CGFloat(heightMultiplier)
+        let widthConstraints = NSLayoutConstraint(item: headClassroomButton, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: CGFloat(buttonWidth))
+        let heightConstraints = NSLayoutConstraint(item: headClassroomButton, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: CGFloat(buttonHeight))
+        let xConstraints = NSLayoutConstraint(item: headClassroomButton, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: CGFloat(classRoomButtonX))
+        let yConstraints = NSLayoutConstraint(item: headClassroomButton, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: CGFloat(classRoomButtonY))
+        NSLayoutConstraint.activate([heightConstraints,widthConstraints,xConstraints,yConstraints])
+
+
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'

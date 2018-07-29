@@ -29,11 +29,10 @@
                                     <constraint firstAttribute="width" secondItem="zmA-gn-Ffl" secondAttribute="height" multiplier="667:375" id="CPq-x2-hqX"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeD-65-ven">
+                            <button opaque="NO" alpha="0.02" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeD-65-ven">
                                 <rect key="frame" x="371" y="39" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.33975967171759636" green="1" blue="0.22774925858597173" alpha="0.6901408450704225" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title=" "/>
                                 <connections>
                                     <segue destination="ozp-VB-5KQ" kind="show" id="ZBk-ze-5oI"/>
                                 </connections>

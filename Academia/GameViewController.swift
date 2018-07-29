@@ -22,7 +22,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let buttonWidth = Double(self.view.frame.size.width) / 5
+        let buttonWidth = Double(self.view.frame.size.width) / 5 
         let buttonHeight = Double(self.view.frame.size.height) / 3
         let classRoomButtonX = Double(self.view.frame.size.width) / 7
         let classRoomButtonY = Double(self.view.frame.size.width) / -7

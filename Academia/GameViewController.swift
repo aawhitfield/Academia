@@ -15,6 +15,8 @@ class GameViewController: UIViewController {
     // names buttons from Layout Builder for use in code
     @IBOutlet weak var headClassroomButton: UIButton!
     @IBOutlet weak var storeButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var achievementsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,10 @@ class GameViewController: UIViewController {
         let classRoomButtonY = Double(self.view.frame.size.width) / -7
         let storeButtonX = Double(self.view.frame.size.width) / 2.75
         let storeButtonY = Double(self.view.frame.size.width) / -7
-        
+        let settingsButtonX = Double(self.view.frame.size.width) / 7
+        let settingsButtonY = Double(self.view.frame.size.width) / 7
+        let achievementsButtonX = Double(self.view.frame.size.width) / 2.75
+        let achievementsButtonY = Double(self.view.frame.size.width) / 7
         
         
         // sets button title and frame size
@@ -39,6 +44,14 @@ class GameViewController: UIViewController {
         storeButton.setTitle("Test Button", for: .normal)
         storeButton.frame = CGRect(x: 200, y: 50, width: 100, height: 100)
         storeButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        settingsButton.setTitle("Test Button", for: .normal)
+        settingsButton.frame = CGRect(x: 200, y: 50, width: 100, height: 100)
+        settingsButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        achievementsButton.setTitle("Test Button", for: .normal)
+        achievementsButton.frame = CGRect(x: 200, y: 50, width: 100, height: 100)
+        achievementsButton.translatesAutoresizingMaskIntoConstraints = false
         
         // sets layout constraints to the button
         let classWidthConstraints = NSLayoutConstraint(item: headClassroomButton, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: CGFloat(buttonWidth))
@@ -52,6 +65,18 @@ class GameViewController: UIViewController {
         let store_xConstraints = NSLayoutConstraint(item: storeButton, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: CGFloat(storeButtonX))
         let store_yConstraints = NSLayoutConstraint(item: storeButton, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: CGFloat(storeButtonY))
         NSLayoutConstraint.activate([storeHeightConstraints,storeWidthConstraints,store_xConstraints,store_yConstraints])
+        
+        let settingsWidthConstraints = NSLayoutConstraint(item: settingsButton, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: CGFloat(buttonWidth))
+        let settingsHeightConstraints = NSLayoutConstraint(item: settingsButton, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: CGFloat(buttonHeight))
+        let settings_xConstraints = NSLayoutConstraint(item: settingsButton, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: CGFloat(settingsButtonX))
+        let settings_yConstraints = NSLayoutConstraint(item: settingsButton, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: CGFloat(settingsButtonY))
+        NSLayoutConstraint.activate([settingsHeightConstraints,settingsWidthConstraints,settings_xConstraints,settings_yConstraints])
+        
+        let achievementsWidthConstraints = NSLayoutConstraint(item: achievementsButton, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: CGFloat(buttonWidth))
+        let achievementsHeightConstraints = NSLayoutConstraint(item: achievementsButton, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: CGFloat(buttonHeight))
+        let achievements_xConstraints = NSLayoutConstraint(item: achievementsButton, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: CGFloat(achievementsButtonX))
+        let achievements_yConstraints = NSLayoutConstraint(item: achievementsButton, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: view, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: CGFloat(achievementsButtonY))
+        NSLayoutConstraint.activate([achievementsHeightConstraints,achievementsWidthConstraints,achievements_xConstraints,achievements_yConstraints])
 
 
         

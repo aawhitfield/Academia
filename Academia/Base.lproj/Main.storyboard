@@ -45,6 +45,22 @@
                                     <segue destination="I4q-ZW-vi0" kind="show" id="rVR-Vb-esT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" alpha="0.02" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clA-44-Z9g">
+                                <rect key="frame" x="414" y="275" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings Button"/>
+                                <connections>
+                                    <segue destination="l47-i0-Zu6" kind="show" id="Kp0-qj-PV7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.02" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHu-MM-pQN">
+                                <rect key="frame" x="563" y="275" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="UYp-nM-cyS" kind="show" id="oro-aW-KWe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -61,7 +77,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="KlS-kv-87j"/>
                     <connections>
+                        <outlet property="achievementsButton" destination="nHu-MM-pQN" id="FUY-Ga-dqU"/>
                         <outlet property="headClassroomButton" destination="QeD-65-ven" id="hFs-1J-FBY"/>
+                        <outlet property="settingsButton" destination="clA-44-Z9g" id="izP-Qv-iyY"/>
                         <outlet property="storeButton" destination="0hA-tU-vLz" id="wOH-hL-KmD"/>
                     </connections>
                 </viewController>
@@ -117,6 +135,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bPb-eH-JxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="881" y="830"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="m1T-fw-20Z">
+            <objects>
+                <viewController title="Settings" id="l47-i0-Zu6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Evx-ql-F4u">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="QgN-qF-j12"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55h-tD-tzD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="836"/>
+        </scene>
+        <!--Achivements-->
+        <scene sceneID="NN0-8Q-MbZ">
+            <objects>
+                <viewController title="Achivements" id="UYp-nM-cyS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5sj-kw-imb">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="wbN-iK-hev"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kFI-9X-T4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="842"/>
         </scene>
     </scenes>
     <resources>

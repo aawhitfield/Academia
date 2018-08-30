@@ -17,6 +17,7 @@
 		C93A949220FDB20D00637512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93A949020FDB20D00637512 /* LaunchScreen.storyboard */; };
 		C93A949D20FDB20D00637512 /* AcademiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A949C20FDB20D00637512 /* AcademiaTests.swift */; };
 		C93A94A820FDB20D00637512 /* AcademiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A94A720FDB20D00637512 /* AcademiaUITests.swift */; };
+		C97B63A42137A595009F3C39 /* ClassroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B63A32137A595009F3C39 /* ClassroomViewController.swift */; };
 		C9F94D57212A80D300D5C6B9 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F94D56212A80D300D5C6B9 /* StoreViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		C93A94A320FDB20D00637512 /* AcademiaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcademiaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93A94A720FDB20D00637512 /* AcademiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademiaUITests.swift; sourceTree = "<group>"; };
 		C93A94A920FDB20D00637512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C97B63A32137A595009F3C39 /* ClassroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomViewController.swift; sourceTree = "<group>"; };
 		C9F94D56212A80D300D5C6B9 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +113,7 @@
 				C93A948720FDB20D00637512 /* GameScene.swift */,
 				C93A948920FDB20D00637512 /* GameViewController.swift */,
 				C93A948B20FDB20D00637512 /* Main.storyboard */,
+				C97B63A32137A595009F3C39 /* ClassroomViewController.swift */,
 				C9F94D56212A80D300D5C6B9 /* StoreViewController.swift */,
 				C93A948E20FDB20D00637512 /* Assets.xcassets */,
 				C93A949020FDB20D00637512 /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 				C9F94D57212A80D300D5C6B9 /* StoreViewController.swift in Sources */,
 				C93A948820FDB20D00637512 /* GameScene.swift in Sources */,
 				C93A948A20FDB20D00637512 /* GameViewController.swift in Sources */,
+				C97B63A42137A595009F3C39 /* ClassroomViewController.swift in Sources */,
 				C93A948220FDB20D00637512 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

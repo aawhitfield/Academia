@@ -110,7 +110,7 @@
         <!--Classroom-->
         <scene sceneID="7bU-2c-cwT">
             <objects>
-                <viewController id="ozp-VB-5KQ" sceneMemberID="viewController">
+                <viewController id="ozp-VB-5KQ" customClass="ClassroomViewController" customModule="Academia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cMd-PY-AqL">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,8 +145,8 @@
                                 <rect key="frame" x="585" y="46" width="62" height="20.5"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-0h-MX5">
-                                <rect key="frame" x="598" y="46" width="36" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAu-0h-MX5">
+                                <rect key="frame" x="607" y="46" width="18" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -261,6 +261,9 @@
                         <viewLayoutGuide key="safeArea" id="aqB-XL-c4i"/>
                     </view>
                     <navigationItem key="navigationItem" title="Classroom" id="3HW-zd-CDU"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="tAu-0h-MX5" id="tCx-nH-UFt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oaG-CW-pp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -47,15 +47,22 @@ class ClassroomViewController: UIViewController {
         }
         else
         {
-            timerLabel.text = String(minutes) + ":0" + String(seconds)
+            timerLabel.text = "0:00"
             timer.invalidate()  // stops timer when reaches zero
+            
+            let alert = UIAlertController(title: "End of Class", message: "Class is over.", preferredStyle: .alert)     // creates the pop up to end class and sets the text
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+                self.performSegue(withIdentifier: "ClassOver", sender: self)
+                            }))
+            self.present(alert, animated: true, completion: nil)    // sets what should happen when you press the OK button -> end of class scene
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+                // Do any additional setup after loading the view.
+        
         if seconds >= 10
         {
             timerLabel.text = String(minutes) + ":" + String(seconds)   // formats seconds for two digit numbers

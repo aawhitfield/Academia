@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ClassroomViewController: UIViewController {
 
@@ -15,6 +16,9 @@ class ClassroomViewController: UIViewController {
     var timer = Timer()
     var minutes = 3
     var seconds = 0
+    
+    // create audio player to play end of class bell
+    var player = AVAudioPlayer()
     
     @objc func decreaseTimer()    // timer function to decrement time by one each second
         // added @objc to get selector to run
@@ -50,6 +54,9 @@ class ClassroomViewController: UIViewController {
             timerLabel.text = "0:00"
             timer.invalidate()  // stops timer when reaches zero
             
+            // play class bell to signal end of period
+            player.play()
+            
             let alert = UIAlertController(title: "End of Class", message: "Class is over.", preferredStyle: .alert)     // creates the pop up to end class and sets the text
             alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
                 NSLog("The \"OK\" alert occured.")
@@ -74,6 +81,17 @@ class ClassroomViewController: UIViewController {
         
         // start timer countdown
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ClassroomViewController.decreaseTimer), userInfo: nil, repeats: true)
+        
+        // set file path for end of class period bell
+        let audioPath = Bundle.main.path(forResource: "school_bell_short", ofType: "mp3")
+        do
+        {
+           try player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+        }
+        catch
+        {
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

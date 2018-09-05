@@ -12,10 +12,14 @@ import AVFoundation
 class ClassroomViewController: UIViewController {
 
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var healthBar: UIImageView!
+    @IBOutlet weak var student1: UIImageView!
+    @IBOutlet weak var healthBarWidthConstraint: NSLayoutConstraint!
     
     var timer = Timer()
     var minutes = 3
     var seconds = 0
+    var healthBarWidth = 41
     
     // create audio player to play end of class bell
     var player = AVAudioPlayer()
@@ -92,6 +96,10 @@ class ClassroomViewController: UIViewController {
         {
             
         }
+        
+        // set up width of health bar
+        //healthBarWidthConstraint = NSLayoutConstraint(item: healthBar, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 41)
+        healthBarWidthConstraint.constant = 41
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,7 +107,12 @@ class ClassroomViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewDidAppear(_ animated: Bool)
+    {
+       
+        
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -128,11 +128,11 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ade-fu-uRg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ade-fu-uRg">
                                 <rect key="frame" x="169.5" y="14" width="163" height="20.5"/>
                                 <color key="backgroundColor" red="0.33975967169999999" green="1" blue="0.2277492586" alpha="0.69014084509999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="163" id="1DJ-6K-J6L"/>
+                                    <constraint firstAttribute="width" priority="250" constant="163" id="1DJ-6K-J6L"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End of Class" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6z-Ux-yGQ">
@@ -262,6 +262,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Classroom" id="3HW-zd-CDU"/>
                     <connections>
+                        <outlet property="healthBar" destination="Ade-fu-uRg" id="Q4W-sy-mtv"/>
+                        <outlet property="healthBarWidthConstraint" destination="1DJ-6K-J6L" id="Gho-6d-3AD"/>
+                        <outlet property="student1" destination="Due-qc-501" id="5k2-gS-1KO"/>
                         <outlet property="timerLabel" destination="tAu-0h-MX5" id="tCx-nH-UFt"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="ClassOver" id="G2S-3m-Voh"/>
                     </connections>

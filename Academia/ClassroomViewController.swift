@@ -16,10 +16,34 @@ class ClassroomViewController: UIViewController {
     @IBOutlet weak var student1: UIImageView!
     @IBOutlet weak var healthBarWidthConstraint: NSLayoutConstraint!
     
+    @IBAction func incrementHealth(_ sender: Any)
+    {
+        var tempWidth = healthBarWidthConstraint.constant
+        tempWidth += 50
+        if tempWidth > CGFloat(maxHealthBarWidth)
+        {
+            tempWidth = CGFloat(maxHealthBarWidth)
+        }
+        healthBarWidthConstraint.constant = tempWidth
+    }
+    
+    @IBAction func decrementHealth(_ sender: Any)
+    {
+        var tempWidth = healthBarWidthConstraint.constant
+        tempWidth -= 50
+        if tempWidth < 0
+        {
+            tempWidth = 0
+        }
+        healthBarWidthConstraint.constant = tempWidth    }
+    
     var timer = Timer()
     var minutes = 3
     var seconds = 0
-    var healthBarWidth = 41
+    let maxHealthBarWidth = 163
+    var lifePercentage = 1.0
+    let green = 120.0     // hue value for green
+    var healthHue = 120.0
     
     // create audio player to play end of class bell
     var player = AVAudioPlayer()
@@ -99,7 +123,12 @@ class ClassroomViewController: UIViewController {
         
         // set up width of health bar
         //healthBarWidthConstraint = NSLayoutConstraint(item: healthBar, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 41)
-        healthBarWidthConstraint.constant = 41
+        healthBarWidthConstraint.constant = CGFloat(Double(maxHealthBarWidth) * lifePercentage)
+        
+        
+        // set color of health bar based on life percentage
+        healthHue = lifePercentage * green
+        healthBar.backgroundColor = UIColor(hue: CGFloat(healthHue/360), saturation: 1.0, brightness: 1.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {

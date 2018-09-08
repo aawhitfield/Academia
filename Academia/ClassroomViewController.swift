@@ -25,6 +25,7 @@ class ClassroomViewController: UIViewController {
             tempWidth = CGFloat(maxHealthBarWidth)
         }
         healthBarWidthConstraint.constant = tempWidth
+        updateHealthBarColor()
     }
     
     @IBAction func decrementHealth(_ sender: Any)
@@ -35,7 +36,9 @@ class ClassroomViewController: UIViewController {
         {
             tempWidth = 0
         }
-        healthBarWidthConstraint.constant = tempWidth    }
+        healthBarWidthConstraint.constant = tempWidth
+        updateHealthBarColor()
+    }
     
     var timer = Timer()
     var minutes = 3
@@ -94,6 +97,13 @@ class ClassroomViewController: UIViewController {
         }
     }
     
+    func updateHealthBarColor()
+    {
+        // set color of health bar based on life percentage
+        lifePercentage = Double(healthBarWidthConstraint.constant / CGFloat(maxHealthBarWidth))
+        healthHue = lifePercentage * green
+        healthBar.backgroundColor = UIColor(hue: CGFloat(healthHue/360), saturation: 1.0, brightness: 1.0, alpha: 1.0)    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 // Do any additional setup after loading the view.
@@ -125,10 +135,8 @@ class ClassroomViewController: UIViewController {
         //healthBarWidthConstraint = NSLayoutConstraint(item: healthBar, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 41)
         healthBarWidthConstraint.constant = CGFloat(Double(maxHealthBarWidth) * lifePercentage)
         
+        updateHealthBarColor()
         
-        // set color of health bar based on life percentage
-        healthHue = lifePercentage * green
-        healthBar.backgroundColor = UIColor(hue: CGFloat(healthHue/360), saturation: 1.0, brightness: 1.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -138,7 +146,8 @@ class ClassroomViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool)
     {
-       
+        // Hide the Navigation Bar
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
         
     }
     

@@ -107,7 +107,7 @@
             </objects>
             <point key="canvasLocation" x="-416" y="17"/>
         </scene>
-        <!--Classroom-->
+        <!--Classroom View Controller-->
         <scene sceneID="7bU-2c-cwT">
             <objects>
                 <viewController id="ozp-VB-5KQ" customClass="ClassroomViewController" customModule="Academia" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,7 +152,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Floor Texture" translatesAutoresizingMaskIntoConstraints="NO" id="Sp3-oO-Hui">
-                                <rect key="frame" x="0.0" y="46" width="667" height="329"/>
+                                <rect key="frame" x="0.0" y="46" width="667" height="297"/>
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lightbulb Off" translatesAutoresizingMaskIntoConstraints="NO" id="eVs-xw-JnK">
@@ -268,7 +268,8 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aqB-XL-c4i"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Classroom" id="3HW-zd-CDU"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="healthBar" destination="Ade-fu-uRg" id="Q4W-sy-mtv"/>
                         <outlet property="healthBarWidthConstraint" destination="1DJ-6K-J6L" id="Gho-6d-3AD"/>

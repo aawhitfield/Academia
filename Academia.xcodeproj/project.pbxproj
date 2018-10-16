@@ -12,12 +12,12 @@
 		C93A948620FDB20D00637512 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C93A948520FDB20D00637512 /* Actions.sks */; };
 		C93A948820FDB20D00637512 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A948720FDB20D00637512 /* GameScene.swift */; };
 		C93A948A20FDB20D00637512 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A948920FDB20D00637512 /* GameViewController.swift */; };
-		C93A948D20FDB20D00637512 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93A948B20FDB20D00637512 /* Main.storyboard */; };
 		C93A948F20FDB20D00637512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C93A948E20FDB20D00637512 /* Assets.xcassets */; };
 		C93A949220FDB20D00637512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C93A949020FDB20D00637512 /* LaunchScreen.storyboard */; };
 		C93A949D20FDB20D00637512 /* AcademiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A949C20FDB20D00637512 /* AcademiaTests.swift */; };
 		C93A94A820FDB20D00637512 /* AcademiaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93A94A720FDB20D00637512 /* AcademiaUITests.swift */; };
 		C97B63A42137A595009F3C39 /* ClassroomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97B63A32137A595009F3C39 /* ClassroomViewController.swift */; };
+		C9BD282A2148CB3800B9FA0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BD28292148CB3800B9FA0C /* Main.storyboard */; };
 		C9BF6DA0213E2699008EAF41 /* school_bell_short.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C9BF6D9F213E2699008EAF41 /* school_bell_short.mp3 */; };
 		C9F94D57212A80D300D5C6B9 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F94D56212A80D300D5C6B9 /* StoreViewController.swift */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,6 @@
 		C93A948520FDB20D00637512 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		C93A948720FDB20D00637512 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		C93A948920FDB20D00637512 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		C93A948C20FDB20D00637512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C93A948E20FDB20D00637512 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C93A949120FDB20D00637512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C93A949320FDB20D00637512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		C93A94A720FDB20D00637512 /* AcademiaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcademiaUITests.swift; sourceTree = "<group>"; };
 		C93A94A920FDB20D00637512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C97B63A32137A595009F3C39 /* ClassroomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassroomViewController.swift; sourceTree = "<group>"; };
+		C9BD28292148CB3800B9FA0C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C9BF6D9F213E2699008EAF41 /* school_bell_short.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = school_bell_short.mp3; sourceTree = "<group>"; };
 		C9F94D56212A80D300D5C6B9 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,8 +114,8 @@
 				C93A948520FDB20D00637512 /* Actions.sks */,
 				C93A948720FDB20D00637512 /* GameScene.swift */,
 				C93A948920FDB20D00637512 /* GameViewController.swift */,
-				C93A948B20FDB20D00637512 /* Main.storyboard */,
 				C97B63A32137A595009F3C39 /* ClassroomViewController.swift */,
+				C9BD28292148CB3800B9FA0C /* Main.storyboard */,
 				C9F94D56212A80D300D5C6B9 /* StoreViewController.swift */,
 				C93A948E20FDB20D00637512 /* Assets.xcassets */,
 				C9BF6D9F213E2699008EAF41 /* school_bell_short.mp3 */,
@@ -251,9 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9BF6DA0213E2699008EAF41 /* school_bell_short.mp3 in Resources */,
-				C93A948D20FDB20D00637512 /* Main.storyboard in Resources */,
 				C93A948420FDB20D00637512 /* GameScene.sks in Resources */,
 				C93A948F20FDB20D00637512 /* Assets.xcassets in Resources */,
+				C9BD282A2148CB3800B9FA0C /* Main.storyboard in Resources */,
 				C93A949220FDB20D00637512 /* LaunchScreen.storyboard in Resources */,
 				C93A948620FDB20D00637512 /* Actions.sks in Resources */,
 			);
@@ -320,14 +320,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C93A948B20FDB20D00637512 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C93A948C20FDB20D00637512 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C93A949020FDB20D00637512 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

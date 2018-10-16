@@ -11,13 +11,37 @@ import AVFoundation
 
 class ClassroomViewController: UIViewController {
 
+    var timer = Timer()
+    var minutes = 3
+    var seconds = 0
+    let maxHealthBarWidth = 163
+    var lifePercentage = 1.0
+    let green = 120.0     // hue value for green
+    var healthHue = 120.0
+    
+    //flags
+    var lightBulb1OnFlag = false
+    
+    // create audio player to play end of class bell
+    var player = AVAudioPlayer()
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var healthBar: UIImageView!
     @IBOutlet weak var student1: UIImageView!
     @IBOutlet weak var healthBarWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var lightBulb1: UIButton!
     
-    @IBAction func incrementHealth(_ sender: Any)
+    @IBAction func studentSelected(_ sender: Any)
     {
+        if(lightBulb1OnFlag)        // does nothing if the light bulb isn't lit
+        {
+            turnLightBulbOff()
+            displayChoice()
+        }
+    }
+    
+    @IBAction func incrementHealth(_ sender: Any?)
+    {
+        print("Did something good")
         var tempWidth = healthBarWidthConstraint.constant
         tempWidth += 50
         if tempWidth > CGFloat(maxHealthBarWidth)
@@ -28,8 +52,9 @@ class ClassroomViewController: UIViewController {
         updateHealthBarColor()
     }
     
-    @IBAction func decrementHealth(_ sender: Any)
+    @IBAction func decrementHealth(_ sender: Any?)
     {
+        print("Did something bad")
         var tempWidth = healthBarWidthConstraint.constant
         tempWidth -= 50
         if tempWidth < 0
@@ -40,16 +65,59 @@ class ClassroomViewController: UIViewController {
         updateHealthBarColor()
     }
     
-    var timer = Timer()
-    var minutes = 3
-    var seconds = 0
-    let maxHealthBarWidth = 163
-    var lifePercentage = 1.0
-    let green = 120.0     // hue value for green
-    var healthHue = 120.0
+   
     
-    // create audio player to play end of class bell
-    var player = AVAudioPlayer()
+    func displayChoice()
+    {
+        // Create the action buttons for the alert
+        let goodAction = UIAlertAction(title: "Do something good", style: .default, handler: {  // sets up the multi-actions if user selects a choice
+            alert in print("Did something good")
+            print("Did something better")
+        })
+        goodAction.setValue(UIColor.black, forKey: "titleTextColor")
+        
+        let badAction = UIAlertAction(title: "Do something bad", style: .default, handler: {alert in
+            print("Did something bad")
+           // ********************* NEED TO ADD CODE TO DECREMENT AND INCREMENT HEALTH BASED ON CHOICES HERE *************************************
+        })
+        badAction.setValue(UIColor.black, forKey: "titleTextColor")
+        
+        // create and configure the alert controller
+        let alert = UIAlertController(title: "Alert Title", message: "This is the alert message and story", preferredStyle: .alert)
+        alert.addAction(goodAction)
+        alert.addAction(badAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func turnLightBulbOn()
+    {
+        if(!lightBulb1OnFlag)
+        {
+            lightBulb1.setImage(UIImage(named: "Lightbulb On"), for: .normal)
+            lightBulb1OnFlag = true
+        }
+        
+    }
+    
+    func turnLightBulbOff()
+    {
+        if(lightBulb1OnFlag)
+        {
+            lightBulb1.setImage(UIImage(named: "Lightbulb Off"), for: .normal)
+            lightBulb1OnFlag = false
+        }
+        
+    }
+    func seeIfStudentHasAQuestion()
+    {
+        let rNumber = Int(arc4random_uniform(11))
+        
+        if rNumber > 8
+        {
+            turnLightBulbOn()
+        }
+    }
     
     @objc func decreaseTimer()    // timer function to decrement time by one each second
         // added @objc to get selector to run
@@ -68,10 +136,14 @@ class ClassroomViewController: UIViewController {
             if seconds >= 10
             {
                 timerLabel.text = String(minutes) + ":" + String(seconds)   // formats seconds for two digit numbers
+                
+                seeIfStudentHasAQuestion()
             }
             else
             {
                 timerLabel.text = String(minutes) + ":0" + String(seconds)  // formats seconds for one digit numbers
+                
+                seeIfStudentHasAQuestion()
                 if seconds == 0     // sets when to reset seconds at the start of next minute
                 {
                     minutes -= 1    // decrements minutes when switches to next minute
